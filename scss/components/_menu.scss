@@ -1,0 +1,45 @@
+
+.main{
+	&-nav{
+		background-color: $color3;
+		position: fixed;
+		top:0;
+		right: 0;
+		right: -$offcanvas-width;
+		width: $offcanvas-width;
+		padding:1em;
+		height: 100vh;
+		z-index: 1000;
+		transition:all 0.3s ease;
+		&.mostrar{
+			right: 0;
+			animation:0.3s aparecer 1;
+		}
+	}
+	&-menu{
+		margin:0;
+		padding: 0;
+		list-style: none;
+	}
+	&-menu__item{
+		border-bottom: 1px solid rgba($color1,.2);
+	}
+	&-menu__link{
+		line-height: 2.7;
+		display: block;
+		text-transform: uppercase;
+		font-family: $font-title;
+		font-weight: $light;
+	}
+}
+@keyframes aparecer{
+	0%{
+		opacity: 0;
+	}
+	50%{
+		opacity: 0.5;
+	}
+	100%{
+		opacity: 1;
+	}
+}

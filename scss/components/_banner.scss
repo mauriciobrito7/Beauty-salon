@@ -1,0 +1,51 @@
+.banner{
+	position: relative;
+	padding-top: 80px;
+	&:after{
+		content: "";
+		position: absolute;
+		top:0;
+		left: 0;
+		width:100%;
+		height: 100%;
+		background-color: $black;
+		opacity: 0.3;
+	}
+
+	&__img{
+		display: block;
+		width: 100%;
+	}
+	&__copy{
+		position: absolute;
+		top:50%;
+		left: 50%;
+		transform:translate(-50%,-50%);
+		width: 90%;
+		text-align: center;
+		z-index: 100;
+		color:$white;
+	}
+	&__copy__title{
+		margin: 0;
+		font-size: 1.4em;
+		@include desde($large){
+			font-size: 3em;
+		}
+	}
+	&__content{
+		margin: 0;
+		font-size: 1em;
+		@include desde($large){
+			
+			font-size: 3em;
+		}
+	}
+	&__button{
+
+		font-size: .8em;
+		@include desde($large){
+			font-size: 1em;
+		}
+	}
+}
