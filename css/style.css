@@ -50,6 +50,9 @@ main {
   z-index: 1001; }
   .icon-menumarker:hover {
     cursor: pointer; }
+  @media screen and (min-width: 1025px) {
+    .icon-menumarker {
+      display: none; } }
 
 .main-nav {
   background-color: #FFAD01;
@@ -65,14 +68,32 @@ main {
   .main-nav.mostrar {
     right: 0;
     animation: 0.3s aparecer 1; }
+  @media screen and (min-width: 1025px) {
+    .main-nav {
+      height: 80px;
+      width: 50%;
+      right: 0;
+      transition: all 0s; } }
 
 .main-menu {
   margin: 0;
   padding: 0;
   list-style: none; }
+  @media screen and (min-width: 1025px) {
+    .main-menu {
+      width: 100%;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+      background-color: transparent; } }
 
 .main-menu__item {
   border-bottom: 1px solid rgba(81, 64, 119, 0.2); }
+  @media screen and (min-width: 1025px) {
+    .main-menu__item {
+      border: 0;
+      color: #fff; } }
 
 .main-menu__link {
   line-height: 2.7;
@@ -80,6 +101,8 @@ main {
   text-transform: uppercase;
   font-family: "Montserrat", "sans-serif";
   font-weight: 300; }
+  .main-menu__link:hover {
+    color: #fff; }
 
 @keyframes aparecer {
   0% {
@@ -106,7 +129,7 @@ main {
     width: 100%; }
   .banner__copy {
     position: absolute;
-    top: 50%;
+    top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 90%;

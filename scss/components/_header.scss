@@ -21,4 +21,7 @@
 	&:hover{
 		cursor: pointer;
 	}
+	@include desde($large){
+			display: none;
+		}
 }

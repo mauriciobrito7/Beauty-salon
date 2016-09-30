@@ -15,14 +15,30 @@
 			right: 0;
 			animation:0.3s aparecer 1;
 		}
+		@include desde($large){
+			height: 80px;
+			width: 50% ;
+			right: 0;
+			transition: all 0s;
+		}
 	}
 	&-menu{
 		margin:0;
 		padding: 0;
 		list-style: none;
+		@include desde($large){
+			width: 100%;
+			display: flex;
+			justify-content: space-around;
+			background-color: transparent;
+		}
 	}
 	&-menu__item{
 		border-bottom: 1px solid rgba($color1,.2);
+		@include desde($large){
+			border: 0;
+			color: $white;
+		}
 	}
 	&-menu__link{
 		line-height: 2.7;
@@ -30,6 +46,9 @@
 		text-transform: uppercase;
 		font-family: $font-title;
 		font-weight: $light;
+		&:hover{
+			color:$white;
+		}
 	}
 }
 @keyframes aparecer{
